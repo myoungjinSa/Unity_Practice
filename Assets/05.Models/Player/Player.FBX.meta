@@ -1,0 +1,347 @@
+fileFormatVersion: 2
+guid: f3cd25b3bf53c4adaaf087d862e435e6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Rthumb
+    100002: Rcalf
+    100004: Lforearm
+    100006: slade_mesh
+    100008: Rforearm
+    100010: Lthigh
+    100012: Rweaponholder
+    100014: stomach
+    100016: pelvis
+    100018: slade_meshLod2
+    100020: head
+    100022: neck
+    100024: chest
+    100026: Rfoot
+    100028: Ribs
+    100030: slade_meshLod1
+    100032: Rthigh
+    100034: Lfoot
+    100036: Lthumb
+    100038: Lwrist
+    100040: Lfingers
+    100042: Larm
+    100044: Lshoulder
+    100046: //RootNode
+    100048: Rfingers
+    100050: Rwrist
+    100052: Rarm
+    100054: Rshoulder
+    100056: Lcalf
+    100058: Hat_Target
+    400000: Rthumb
+    400002: Rcalf
+    400004: Lforearm
+    400006: slade_mesh
+    400008: Rforearm
+    400010: Lthigh
+    400012: Rweaponholder
+    400014: stomach
+    400016: pelvis
+    400018: slade_meshLod2
+    400020: head
+    400022: neck
+    400024: chest
+    400026: Rfoot
+    400028: Ribs
+    400030: slade_meshLod1
+    400032: Rthigh
+    400034: Lfoot
+    400036: Lthumb
+    400038: Lwrist
+    400040: Lfingers
+    400042: Larm
+    400044: Lshoulder
+    400046: //RootNode
+    400048: Rfingers
+    400050: Rwrist
+    400052: Rarm
+    400054: Rshoulder
+    400056: Lcalf
+    400058: Hat_Target
+    4300000: slade_mesh
+    4300002: slade_meshLod1
+    4300004: slade_meshLod2
+    4300006: assasin_mesh
+    4300008: sherrif_mesh
+    4300010: dancer_mesh
+    4300012: beast_mesh
+    4300014: widow_mesh
+    4300016: toltech_mesh
+    4300018: sara_mesh
+    4300020: mutant_mesh
+    4300022: toltech_meshLod1
+    4300024: toltech_meshLod2
+    4300026: sherrif_meshLod1
+    4300028: sherrif_meshLod2
+    4300030: assasin_meshLod1
+    4300032: assasin_meshLod2
+    4300034: beast_meshLod1
+    4300036: beast_meshLod2
+    4300038: mutant_meshLod1
+    4300040: mutant_meshLod2
+    4300042: sara_meshLod1
+    4300044: sara_meshLod2
+    4300046: widow_meshLod1
+    4300048: widow_meshLod2
+    4300050: dancer_meshLod1
+    4300052: dancer_meshLod2
+    7400000: runForward
+    7400002: Idle
+    7400004: runBackward
+    7400006: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: slade_mesh
+    13700002: slade_meshLod2
+    13700004: slade_meshLod1
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Defaultd
+    second: {fileID: 2100000, guid: 1b7c6da276d564d30b27a2b8d1b9b5dd, type: 2}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Rshoulder' has translation animation that will
+      be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 2
+    extraExposedTransformPaths:
+    - pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton:
+    - name: Player(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: slade_mesh
+      parentName: Player(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: slade_meshLod1
+      parentName: Player(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: slade_meshLod2
+      parentName: Player(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pelvis
+      parentName: Player(Clone)
+      position: {x: -0, y: 0.99369985, z: 0}
+      rotation: {x: -0.4965428, y: 0.50343364, z: -0.4965427, w: 0.50343347}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stomach
+      parentName: pelvis
+      position: {x: -0.2028524, y: -0.000000049999997, z: 0}
+      rotation: {x: -0.00000013100262, y: 0.00000013527914, z: -0.016058039, w: 0.9998711}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ribs
+      parentName: stomach
+      position: {x: -0.15207209, y: 0.00020904999, z: 0}
+      rotation: {x: 0, y: 0, z: 0.013232115, w: 0.99991244}
+      scale: {x: 1, y: 1, z: 1}
+    - name: chest
+      parentName: Ribs
+      position: {x: -0.16872402, y: -0.0022858, z: 0}
+      rotation: {x: 0, y: -0, z: -0.062535174, w: 0.99804276}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rshoulder
+      parentName: chest
+      position: {x: -0.18714482, y: -0.00850796, z: 0}
+      rotation: {x: 0.3653021, y: 0.531749, z: -0.5753826, w: 0.5027248}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rarm
+      parentName: Rshoulder
+      position: {x: -0.24288118, y: 0.0007495, z: -0.0018962399}
+      rotation: {x: 0.049200885, y: 0.053772833, z: -0.38546896, w: 0.9198378}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rforearm
+      parentName: Rarm
+      position: {x: -0.33385673, y: 0.00000159, z: 0.00000003}
+      rotation: {x: -0.11658554, y: 0.22380644, z: -0.04645805, w: 0.9665196}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rwrist
+      parentName: Rforearm
+      position: {x: -0.3354338, y: -0.0037568798, z: -0.0060912}
+      rotation: {x: 0.7271985, y: 0.032193378, z: 0.004494351, w: 0.6856572}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rweaponholder
+      parentName: Rwrist
+      position: {x: -0.00000008, y: 0.00000004, z: -0.00000014999999}
+      rotation: {x: 0.0000003766279, y: -0.7071067, z: 0.0000003766278, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rfingers
+      parentName: Rwrist
+      position: {x: -0.114370115, y: -0.00154789, z: -0.0020077}
+      rotation: {x: -0.060864117, y: -0.5066, z: 0.07704368, w: 0.8565724}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rthumb
+      parentName: Rwrist
+      position: {x: 0.031436358, y: 0.03416653, z: -0.02791414}
+      rotation: {x: -0.7331484, y: -0.023891628, z: -0.3564015, w: 0.57870597}
+      scale: {x: 1, y: 1, z: 1}
+    - name: neck
+      parentName: chest
+      position: {x: -0.19376901, y: -0.00885981, z: 0}
+      rotation: {x: -0.0000009789703, y: -0.00000020400333, z: 0.20400333, w: 0.9789702}
+      scale: {x: 1, y: 1, z: 1}
+    - name: head
+      parentName: neck
+      position: {x: -0.102589004, y: -0.00000004, z: 0}
+      rotation: {x: -0.0000009902386, y: 0.00000013938221, z: -0.13938221, w: 0.99023867}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hat_Target
+      parentName: head
+      position: {x: -0.10643017, y: 0.0015116894, z: 0.00000015258789}
+      rotation: {x: 0.49839967, y: -0.5015952, z: 0.4983974, w: 0.50159746}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.99999964}
+    - name: Lshoulder
+      parentName: chest
+      position: {x: -0.18714482, y: -0.00850796, z: 0}
+      rotation: {x: -0.5027252, y: 0.57538295, z: -0.5317488, w: -0.36530152}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Larm
+      parentName: Lshoulder
+      position: {x: -0.24288116, y: -0.00074956997, z: -0.00189621}
+      rotation: {x: -0.04920068, y: 0.0537728, z: 0.38546914, w: 0.9198377}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lforearm
+      parentName: Larm
+      position: {x: -0.33385685, y: -0.00000143, z: -0.00000014999999}
+      rotation: {x: 0.11658603, y: 0.22380647, z: 0.046457935, w: 0.9665196}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lwrist
+      parentName: Lforearm
+      position: {x: -0.33543366, y: 0.00375685, z: -0.0060910797}
+      rotation: {x: -0.7271988, y: 0.03219337, z: -0.004494705, w: 0.6856569}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lfingers
+      parentName: Lwrist
+      position: {x: -0.11437008, y: 0.00154789, z: -0.0020077499}
+      rotation: {x: 0.060864117, y: -0.5066, z: -0.07704368, w: 0.8565724}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lthumb
+      parentName: Lwrist
+      position: {x: 0.03143623, y: -0.03416651, z: -0.02791397}
+      rotation: {x: 0.7331484, y: -0.023891967, z: 0.35640186, w: 0.57870585}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rthigh
+      parentName: pelvis
+      position: {x: -0.065211125, y: -0.0018771399, z: 0.11102256}
+      rotation: {x: -0.020981219, y: -0.0007106023, z: 0.99830383, w: 0.05430309}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rcalf
+      parentName: Rthigh
+      position: {x: -0.4492408, y: -0.000000049999997, z: 0.00000003}
+      rotation: {x: -0.0011041025, y: -0.009197475, z: 0.13555366, w: 0.9907267}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rfoot
+      parentName: Rcalf
+      position: {x: -0.49058688, y: -0.00000006, z: -0.00000006}
+      rotation: {x: 0.00038616132, y: 0.00035723927, z: -0.6796021, w: 0.73358077}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lthigh
+      parentName: pelvis
+      position: {x: -0.06653591, y: -0.0018588699, z: -0.11}
+      rotation: {x: 0.054360665, y: 0.9982899, z: -0.0007188833, w: -0.021488149}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lcalf
+      parentName: Lthigh
+      position: {x: -0.45058784, y: 0.00000016, z: 0.000000109999995}
+      rotation: {x: 0.0011624043, y: -0.0097061405, z: -0.13578682, w: 0.9906899}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lfoot
+      parentName: Lcalf
+      position: {x: -0.4906277, y: 0.00000004, z: 0.00000002}
+      rotation: {x: -0.0004032723, y: 0.0003740935, z: 0.6797333, w: 0.73345923}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

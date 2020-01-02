@@ -1,0 +1,27 @@
+Begin Object Class=MaterialInstanceConstant Name="WaterInstance"
+   Begin Object Class=SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   ParameterStateId=7A484E3E452ECAFB61E93999E9240720
+   Parent=Material'/Game/CartoonRtsFoliage/Assets/Materials/M_Foliage_Water.M_Foliage_Water'
+   ScalarParameterValues(0)=(ParameterName="add",ParameterValue=0.665083,ExpressionGUID=C996AAAB412808AFB56D1188CEF6BD89)
+   ScalarParameterValues(1)=(ParameterName="BlackIntensity",ParameterValue=1.000000,ExpressionGUID=B356A4D04FDD4458C860C4AC32C2B488)
+   ScalarParameterValues(2)=(ParameterName="Foam",ParameterValue=75.177002,ExpressionGUID=3E951B284C6D0968D422F38AF96F56E8)
+   ScalarParameterValues(3)=(ParameterName="MaskStrengh",ParameterValue=0.300000,ExpressionGUID=D7793F804132456451EC3FA9CAA9D138)
+   ScalarParameterValues(4)=(ParameterName="RefractionDepthBias")
+   VectorParameterValues(0)=(ParameterName="A_Color",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=E1F2B3AF4BFA1E2A1C86A6ABBEBE758E)
+   VectorParameterValues(1)=(ParameterName="A_Param",ParameterValue=(R=0.980000,G=0.980000,B=0.980000,A=1.000000),ExpressionGUID=700009A34F902423BBCD5E99139FF877)
+   VectorParameterValues(2)=(ParameterName="B_Color",ParameterValue=(R=0.000000,G=0.000000,B=1.000000,A=1.000000),ExpressionGUID=E6A076E04748860D48892CBE44834B11)
+   VectorParameterValues(3)=(ParameterName="B_Param",ParameterValue=(R=0.156698,G=0.359776,B=0.505000,A=1.000000),ExpressionGUID=FC2C213C4F880BD67F51B6940E1A4472)
+   VectorParameterValues(4)=(ParameterName="C_HeighLerp",ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000),ExpressionGUID=69BBC37E4B36C0F0ADC2AC86B9DDDD3E)
+   VectorParameterValues(5)=(ParameterName="D_HeighLerp",ParameterValue=(R=0.156698,G=0.359776,B=0.505000,A=1.000000),ExpressionGUID=B23850FC44602E254D1007A63C5DE5B5)
+   ReferencedTextureGuids(0)=6974B54F47A955CAB95AF18E155D95BA
+   ReferencedTextureGuids(1)=F1F44199442235D769F484BC5FA461A3
+   ReferencedTextureGuids(2)=6A58A0A448A5B93B692B23AAE0387F5B
+   TextureStreamingData(0)=(SamplingScale=0.015625,UVChannelIndex=0,TextureName="T_Foliage_GroundMask_02",TextureReference=/Game/CartoonRtsFoliage/Assets/Textures/T_Foliage_GroundMask_02.T_Foliage_GroundMask_02)
+   TextureStreamingData(1)=(SamplingScale=0.015625,UVChannelIndex=0,TextureName="T_WaterMask_M",TextureReference=/Game/CartoonRtsFoliage/Assets/Textures/Landscape/T_WaterMask_M.T_WaterMask_M)
+   TextureStreamingData(2)=(SamplingScale=0.015625,UVChannelIndex=0,TextureName="T_WaterMask_MN",TextureReference=/Game/CartoonRtsFoliage/Assets/Textures/Landscape/T_WaterMask_MN.T_WaterMask_MN)
+   ThumbnailInfo=SceneThumbnailInfoWithPrimitive'SceneThumbnailInfoWithPrimitive_0'
+   LightingGuid=FE331BB0474C86513B8D7B9263D7FD50
+End Object
