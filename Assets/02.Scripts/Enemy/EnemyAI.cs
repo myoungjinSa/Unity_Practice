@@ -25,6 +25,10 @@ public class EnemyAI : MonoBehaviour
     //Animator 컴포넌트를 저장할 변수
     private Animator animator;
 
+    //총알 발사를 제어하는 EnemyFire 클래스를 저장할 변수
+    private EnemyFire enemyFire;
+
+
 
     //공격 사정거리
     public float attackDist = 5.0f;
@@ -71,6 +75,8 @@ public class EnemyAI : MonoBehaviour
             //코루틴의 지연 시간 생성1
             ws = new WaitForSeconds(0.3f);
 
+            //총알 발사를 제어하는 EnemyFire 클래스를 추출
+            enemyFire = GetComponent<EnemyFire>();
         }
     }
 
@@ -123,24 +129,33 @@ public class EnemyAI : MonoBehaviour
             switch(state)
             {
                 case State.PATROL:
+                    //총알 발사를 정지
+                    enemyFire.isFire = false;
                     //순찰 모드를 활성화
                     moveAgent.patrolling = true;
                     animator.SetBool(hashMove, true);
 
                     break;
                 case State.TRACE:
+                    //총알 발사를 정지
+                    enemyFire.isFire = false;
                     //주인공의 위치를 넘겨 추적 모드로 변경
                     moveAgent.traceTarget = playerTr.position;
 
                     animator.SetBool(hashMove, true);
                     break;
                 case State.ATTACK:
+                    //총알 발사
+                    if(enemyFire.isFire == false)
+                        enemyFire.isFire = true;
+
                     //순찰 및 추적을 정지
                     moveAgent.Stop();
                     animator.SetBool(hashMove, false);
 
                     break;
                 case State.DIE:
+
                     //순찰 및 추적을 정지
                     moveAgent.Stop();
                     break;
