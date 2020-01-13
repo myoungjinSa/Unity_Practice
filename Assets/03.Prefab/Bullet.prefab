@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2994867340524142976}
   - component: {fileID: 2994867340524143007}
-  - component: {fileID: 2994867340524142977}
   - component: {fileID: 5736644082708926392}
   - component: {fileID: 2047402794723055899}
-  m_Layer: 0
+  - component: {fileID: 8326204485684972518}
+  m_Layer: 12
   m_Name: Bullet
   m_TagString: BULLET
   m_Icon: {fileID: 0}
@@ -51,19 +51,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2994867340524142977
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2994867340524143006}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5736644082708926392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb3357fd0e93554c848376ef4be8e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 20
   speed: 1000
 --- !u!96 &2047402794723055899
 TrailRenderer:
@@ -191,6 +178,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!135 &8326204485684972518
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2994867340524143006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &2994867342444535133
 SphereCollider:
   m_ObjectHideFlags: 0

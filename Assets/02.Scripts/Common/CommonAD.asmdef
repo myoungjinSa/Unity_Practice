@@ -1,8 +1,6 @@
 {
-    "name": "PlayerAD",
-    "references": [
-        "CommonAD"
-    ],
+    "name": "CommonAD",
+    "references": [],
     "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],

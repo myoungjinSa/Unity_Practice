@@ -34,6 +34,9 @@ public class BarrelCtrl : MonoBehaviour
     //폭발음 오디오 클립
     public AudioClip expSfx;
 
+    //Shake 클래스를 저장할 변수
+    public Shake shake;
+
 
 
     // Start is called before the first frame update
@@ -53,6 +56,9 @@ public class BarrelCtrl : MonoBehaviour
 
         //난수를 발생시켜 불규칙적인 텍스쳐를 적용
         _renderer.material.mainTexture = textures[Random.Range(0, textures.Length)];
+
+        //Shake 스크립트를 추출
+        shake = GameObject.Find("CameraRig").GetComponent<Shake>();
     }
 
 
@@ -115,6 +121,9 @@ public class BarrelCtrl : MonoBehaviour
         GetComponent<MeshCollider>().sharedMesh = meshes[idx];
 
         _audio.PlayOneShot(expSfx, 1.0f);
+
+        //셰이크 효과 추출
+        StartCoroutine(shake.ShakeCamera(0.1f, 0.2f, 0.5f));
     }
     // Update is called once per frame
     void Update()

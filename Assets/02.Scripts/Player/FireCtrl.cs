@@ -45,6 +45,8 @@ public class FireCtrl : MonoBehaviour
     //오디오 클립을 저장할 변수
     public PlayerSfx playerSfx;
 
+    //Shake 클래스를 저장할 추출
+    private Shake shake;
     
 
 
@@ -56,6 +58,10 @@ public class FireCtrl : MonoBehaviour
         //AudioSource 컴포넌트 추출
         _audio = GetComponent<AudioSource>();
 
+        //Shake 스크립트 추출
+        shake = GameObject.Find("CameraRig").GetComponent<Shake>();
+        
+
     }
 
     void Update()
@@ -63,12 +69,15 @@ public class FireCtrl : MonoBehaviour
         //마우스 왼쪽 버튼을 클릭했을 때 Fire함수 호출       //0 :왼쪽 버튼, 1: 오른쪽 버튼 ,2: 가운데 버튼
         if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log("발사");
+           // Debug.Log("발사");
             Fire();
         }
     }
     void Fire()
     {
+        //셰이크 효과 추출
+        StartCoroutine(shake.ShakeCamera());
+
         //Instantiate(총알 프리팹,총알 생성 위치,총알 각도)
         //Bullet 프리팹을 동적으로 생성
         Instantiate(bullet, firePos.position, firePos.rotation);
