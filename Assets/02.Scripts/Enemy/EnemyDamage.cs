@@ -43,16 +43,16 @@ public class EnemyDamage : MonoBehaviour
         {
             //혈흔 효과를 생성하는 함수 호출
             ShowBloodEffect(coll);
-
+         
             //총알 삭제
             Destroy(coll.gameObject);
-
+           
             //생명 게이지 차감
             hp -= coll.gameObject.GetComponent<BulletCtrl>().damage;
 
             Debug.Log("hp = " + hp.ToString());
-
-            if(hp <= 0.0f)
+                       
+            if (hp <= 0.0f)
             {
                 //적 캐릭터의 상태르 Die로 변경
                 GetComponent<EnemyAI>().state = EnemyAI.State.DIE;

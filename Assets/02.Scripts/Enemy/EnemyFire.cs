@@ -6,7 +6,7 @@ public class EnemyFire : MonoBehaviour
 {
 
     //AudioSource 컴포넌트를 저장할 변수
-    private AudioSource audio;
+    private new AudioSource audio;
 
     //Animator 컴포넌트를 저장할 변수
     private Animator animator;
@@ -69,6 +69,8 @@ public class EnemyFire : MonoBehaviour
         audio = GetComponent<AudioSource>();
 
         wsReload = new WaitForSeconds(reloadTime);
+
+        muzzleFlash.enabled = false;
     }
 
     IEnumerator Reloading()

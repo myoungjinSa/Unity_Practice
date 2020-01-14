@@ -50,8 +50,9 @@ public class EnemyAI : MonoBehaviour
     private readonly int hashSpeed = Animator.StringToHash("Speed");
     private readonly int hashDie = Animator.StringToHash("Die");
     private readonly int hashDieIdx = Animator.StringToHash("DieIdx");
-
-    
+    private readonly int hashOffset = Animator.StringToHash("Offset");
+    private readonly int hashWalkSpeed = Animator.StringToHash("WalkSpeed");
+    private readonly int hashPlayerDie = Animator.StringToHash("PlayerDie");
 
     void Awake()
     {
@@ -59,26 +60,32 @@ public class EnemyAI : MonoBehaviour
         var player = GameObject.FindGameObjectWithTag("PLAYER");
 
         //주인공의 TRANSFORM 컴포넌트 추출
-        if(player != null)
+        if (player != null)
         {
             playerTr = player.GetComponent<Transform>();
 
-            //적 캐릭터의 Transform 컴포넌트 추출
-            enemyTr = GetComponent<Transform>();
-
-            //적 캐릭터의 Transform 컴포넌트를 추출
-            animator = GetComponent<Animator>();
-
-
-            //이동을 제어하는 MoveAgent 클래스를 추출
-            moveAgent = GetComponent<MoveAgent>();
-
-            //코루틴의 지연 시간 생성1
-            ws = new WaitForSeconds(0.3f);
-
-            //총알 발사를 제어하는 EnemyFire 클래스를 추출
-            enemyFire = GetComponent<EnemyFire>();
         }
+        //적 캐릭터의 Transform 컴포넌트 추출
+        enemyTr = GetComponent<Transform>();
+
+        //적 캐릭터의 Transform 컴포넌트를 추출
+        animator = GetComponent<Animator>();
+
+
+        //이동을 제어하는 MoveAgent 클래스를 추출
+        moveAgent = GetComponent<MoveAgent>();
+
+        //총알 발사를 제어하는 EnemyFire 클래스를 추출
+        enemyFire = GetComponent<EnemyFire>();
+
+        //코루틴의 지연 시간 생성1
+        ws = new WaitForSeconds(0.3f);
+
+        //Cycle Offset 값을 불규칙하게 변경
+        animator.SetFloat(hashOffset, Random.Range(0.0f, 1.0f));
+
+        //WalkSpeed 값을 불규칙하게 변경
+        animator.SetFloat(hashWalkSpeed, Random.Range(1.0f, 1.2f));
     }
 
     //적 캐릭터의 상태를 검사하는 코루틴 함수
@@ -117,6 +124,16 @@ public class EnemyAI : MonoBehaviour
 
         //Action 코루틴 함수 실행
         StartCoroutine(Action());
+
+        //이벤트는 반드시 스크립트 활성화 시점에 연결해야함
+        //이벤트 연결
+        Damage.OnPlayerDie += this.OnPlayerDie;
+    }
+
+    void OnDisable()
+    {
+        //이벤트는 반드시 스크립트 비활성화 시점에 해지해야함.
+        Damage.OnPlayerDie -= this.OnPlayerDie;
     }
 
     //상태에 따라 적 캐릭터의 행동을 처리하는 코루틴 함수
@@ -176,6 +193,18 @@ public class EnemyAI : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public void OnPlayerDie()
+    {
+        moveAgent.Stop();
+
+        enemyFire.isFire = false;
+
+        //모드 코루틴 함수를 종료시킴
+        StopAllCoroutines();
+
+        animator.SetTrigger(hashPlayerDie);
     }
 
     // Start is called before the first frame update

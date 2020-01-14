@@ -23,19 +23,6 @@ public class RemoveBullet : MonoBehaviour
         }
 
     }
-    private void OnTriggerEnter(Collision coll)
-    {
-
-        //충돌이 게임오브젝트의 태그값 비교
-        if (coll.collider.tag == "BULLET")
-        {
-            ShowEffect(coll);
-            //충돌한 게임오브젝트의 삭제
-            Destroy(coll.gameObject);
-
-        }
-
-    }
 
 
 

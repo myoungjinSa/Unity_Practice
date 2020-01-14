@@ -109,6 +109,9 @@ public class MoveAgent : MonoBehaviour
 
             //배열의 첫 번째 항목 삭제  그 이유는 GetComponentsInChildren 함수는 추출하고자 하는 컴포넌트가 Parent에도 있다면 같이 포함해서 결과값을 반환하기 때문
             wayPoints.RemoveAt(0);
+
+            //첫 번째로 이동할 위치를 불규칙하게 추출
+            nextIdx = Random.Range(0, wayPoints.Count);
         }
 
         //MoveWayPoint();
@@ -156,15 +159,16 @@ public class MoveAgent : MonoBehaviour
         //순찰모드가 아닐 경우 이후 로직을 수행하지 않음
         if (!_patrolling) return;
 
-        Debug.Log("agent:velocity :" + agent.velocity.sqrMagnitude.ToString());
-        Debug.Log("agent:remainingDistance : " + agent.remainingDistance.ToString());
+        //Debug.Log("agent:velocity :" + agent.velocity.sqrMagnitude.ToString());
+       // Debug.Log("agent:remainingDistance : " + agent.remainingDistance.ToString());
         //NavMeshAgent 가 이동하고 있고 목적지에 도착했는지 여부를 계산
         if(agent.velocity.sqrMagnitude >= 0.0f && agent.remainingDistance <= 0.5f)
         {
             //다음 목적지의 배열 첨자를 계산
-            nextIdx = ++nextIdx % wayPoints.Count;
+            // nextIdx = ++nextIdx % wayPoints.Count;
+            nextIdx = Random.Range(0, wayPoints.Count);
 
-            Debug.Log("Next Pos : " + nextIdx.ToString());
+         //   Debug.Log("Next Pos : " + nextIdx.ToString());
             //다음 목적지로 이동 명령을 수행
             MoveWayPoint();
         }
