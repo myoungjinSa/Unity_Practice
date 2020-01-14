@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//UI 항목에 접근하기 위해 선언하는 네임스페이스
+using UnityEngine.UI;
 
 public class Damage : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class Damage : MonoBehaviour
 
     private float initHp = 100.0f;
     public float currHp;
+
+    //BloodScreen 텍스쳐를 저장하기 위한 변수
+    public Image bloodScreen;
 
 
     //델리게이트 및 이벤트 선언
@@ -21,6 +26,15 @@ public class Damage : MonoBehaviour
     {
         currHp = initHp;    
     }
+    IEnumerator ShowBloodScreen()
+    {
+        //BloodScreen 텍스쳐의 알파값을 불규칙하게 변경
+        bloodScreen.color = new Color(1, 0, 0, Random.Range(0.2f, 0.3f));
+        yield return new WaitForSeconds(0.1f);
+        //BloodScreen 텍스쳐의 색상을 모두 0으로 변경
+        bloodScreen.color = Color.clear;
+
+    }
 
     //충돌한 Collider 의 IsTrigger 옵션이 체크됐을 때 발생
     void OnTriggerEnter(Collider coll)
@@ -29,6 +43,9 @@ public class Damage : MonoBehaviour
         if(coll.tag == bulletTag)
         {
             Destroy(coll.gameObject);
+
+            //혈흔 효과를 표현할 코루틴 함수 호출
+            StartCoroutine(ShowBloodScreen());
 
             currHp -= 5.0f;
             Debug.Log("Player HP = " + currHp.ToString());
