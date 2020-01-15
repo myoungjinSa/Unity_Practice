@@ -10,19 +10,35 @@ public class BulletCtrl : MonoBehaviour
     //총알의 속도
     public float speed = 0.0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //월드 좌표의 z축 방향으로 날아감
-        GetComponent<Rigidbody>().AddForce(transform.forward * speed);
+    //컴포넌트를 저장할 변수
+    private Transform tr;
+    private Rigidbody rb;
+    private TrailRenderer trail;
 
-       // Debug.Log("발사");
-        //오브젝트의 로컬 좌표의 z축 방향으로날아감 => GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * speed)
+
+    void Awake()
+    {
+        //컴포넌트를 할당
+        tr = GetComponent<Transform>();
+        rb = GetComponent<Rigidbody>();
+        trail = GetComponent<TrailRenderer>();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
-        
+        rb.AddForce(transform.forward * speed);
+    }
+
+    void OnDisable()
+    {
+        //재활용된 총알의 여러 효과값을 초기화
+        trail.Clear();
+
+        tr.position = Vector3.zero;
+        tr.rotation = Quaternion.identity;
+
+        //물리엔진의 연산을 정지
+        rb.Sleep();
     }
 }
